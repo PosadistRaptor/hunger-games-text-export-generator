@@ -1,28 +1,28 @@
 while True:
     try:
-        cast_size = int(input("Cast size: "))
+        team_size = int(input("Team size: "))
         break
     except ValueError:
         print("Cast size must be in integers")
 while True:
     try:
-        district_size = int(input("District size: "))
+        total_district = int(input("Total district : "))
         break
     except ValueError:
-        print("District size must be in integers")
-        
-print(f"There's a total amount of {cast_size*district_size} participants with {cast_size} members for each"
-      f" {district_size} districts") 
+        print("Total district must be in integers")
+
+print(f"There's a total amount of {team_size * total_district} participants with {team_size} members for each"
+      f" {total_district} districts")
 
 with open("HG cast.txt.txt", "w") as hunger_games:
     hunger_games.write("The Hunger Games\nhttps://brantsteele.com/extras/hungergames/01/logo.png\n\n")
-    
-district = 1
-while district <= district_size:
+
+i = 1
+while i <= total_district:
     with open("HG cast.txt", "a") as hunger_games:
-        hunger_games.write(f"\nDistrict {district}\n#ffffff 0 0\n\n")
-        district += 1
-    for cast in range(cast_size):
+        hunger_games.write(f"\nDistrict {i}\n#ffffff 0 0\n\n")
+        i += 1
+    for cast in range(team_size):
         name = input("\nName : ")
         gender = input("Gender (M/F): ").strip()
         while gender.lower() != "m" and gender.lower() != "f":
