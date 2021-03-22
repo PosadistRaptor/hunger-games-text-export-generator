@@ -14,7 +14,7 @@ while True:
 print(f"There's a total amount of {team_size * total_district} participants with {team_size} members for each"
       f" {total_district} districts")
 
-with open("HG cast.txt.txt", "w") as hunger_games:
+with open("HG cast.txt", "w") as hunger_games:
     hunger_games.write("The Hunger Games\nhttps://brantsteele.com/extras/hungergames/01/logo.png\n\n")
 
 i = 1
